@@ -1,6 +1,7 @@
 import CheckListActions from "./components/check-list-actions";
 import Completion from "./components/completion";
 import Header from "./components/header";
+import PackItems from "./components/pack-items";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Completion />
 
         <CheckListActions />
+
+        <PackItems />
       </div>
     </div>
   );
