@@ -1,3 +1,4 @@
+import CheckListActions from "./components/check-list-actions";
 import Completion from "./components/completion";
 import Header from "./components/header";
 
@@ -8,6 +9,8 @@ function App() {
         <Header />
 
         <Completion />
+
+        <CheckListActions />
       </div>
     </div>
   );
