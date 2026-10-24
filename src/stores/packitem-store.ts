@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-interface PackItem {
+export interface PackItem {
   id: string;
   isChecked: boolean;
   title: string;
@@ -8,6 +8,10 @@ interface PackItem {
 
 interface PackItemStore {
   addItem: (title: string) => void;
+  checkAll: () => void;
+  defaultItems: (packItems: PackItem[]) => void;
+  deleteAll: () => void;
+  deleteChecked: () => void;
   packItems: PackItem[];
   removeItem: (id: string) => void;
   updateItem: (id: string) => void;
@@ -24,6 +28,23 @@ export const usePackItemStore = create<PackItemStore>((set) => ({
           title,
         },
       ],
+    })),
+
+  checkAll: () =>
+    set((state) => ({
+      packItems: state.packItems.map((packItem) => ({
+        ...packItem,
+        isChecked: true,
+      })),
+    })),
+
+  defaultItems: (packItems) => set(() => ({ packItems })),
+
+  deleteAll: () => set(() => ({ packItems: [] })),
+
+  deleteChecked: () =>
+    set((state) => ({
+      packItems: state.packItems.filter((packItem) => !packItem.isChecked),
     })),
 
   packItems: [
