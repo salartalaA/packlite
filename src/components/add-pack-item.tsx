@@ -25,7 +25,7 @@ const AddPackItem = () => {
     >
       <Input
         autoComplete="off"
-        className="border-none! bg-transparent p-0 outline-none! ring-0!"
+        className="border-none! bg-transparent p-0 text-xs! outline-none! ring-0!"
         // biome-ignore lint/performance/noJsxPropsBind: No performance issue
         onChange={(e) => setNewItem(e.target.value)}
         placeholder="وسیله جدید ..."
