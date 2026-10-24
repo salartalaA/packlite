@@ -1,8 +1,7 @@
 import AddPackItem from "./components/add-pack-item";
-import CheckListActions from "./components/check-list-actions";
 import Completion from "./components/completion";
 import Header from "./components/header";
-import PackItems from "./components/pack-items";
+import PackSection from "./components/pack-section";
 
 function App() {
   return (
@@ -12,9 +11,7 @@ function App() {
 
         <Completion />
 
-        <CheckListActions />
-
-        <PackItems />
+        <PackSection />
 
         <AddPackItem />
 
